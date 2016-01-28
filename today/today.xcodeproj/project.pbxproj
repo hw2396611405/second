@@ -14,6 +14,8 @@
 		7BE875B01C58A275008597F4 /* today.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BE875AE1C58A275008597F4 /* today.xcdatamodeld */; };
 		7BE875B21C58A275008597F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BE875B11C58A275008597F4 /* Assets.xcassets */; };
 		7BE875B51C58A275008597F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BE875B31C58A275008597F4 /* LaunchScreen.storyboard */; };
+		7BE875BD1C58C875008597F4 /* star_faved@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BE875BC1C58C875008597F4 /* star_faved@2x.png */; settings = {ASSET_TAGS = (); }; };
+		7BE875BF1C58C883008597F4 /* iconfont-favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BE875BE1C58C883008597F4 /* iconfont-favorite.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		7BE875B11C58A275008597F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BE875B41C58A275008597F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BE875B61C58A275008597F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BE875BC1C58C875008597F4 /* star_faved@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_faved@2x.png"; sourceTree = "<group>"; };
+		7BE875BE1C58C883008597F4 /* iconfont-favorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconfont-favorite.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 		7BE875A11C58A275008597F4 /* today */ = {
 			isa = PBXGroup;
 			children = (
+				7BE875BE1C58C883008597F4 /* iconfont-favorite.png */,
+				7BE875BC1C58C875008597F4 /* star_faved@2x.png */,
 				7BE875A51C58A275008597F4 /* AppDelegate.h */,
 				7BE875A61C58A275008597F4 /* AppDelegate.m */,
 				7BE875A81C58A275008597F4 /* ViewController.h */,
@@ -140,7 +146,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BE875BF1C58C883008597F4 /* iconfont-favorite.png in Resources */,
 				7BE875B51C58A275008597F4 /* LaunchScreen.storyboard in Resources */,
+				7BE875BD1C58C875008597F4 /* star_faved@2x.png in Resources */,
 				7BE875B21C58A275008597F4 /* Assets.xcassets in Resources */,
 				7BE875AD1C58A275008597F4 /* Main.storyboard in Resources */,
 			);
@@ -303,6 +311,7 @@
 				7BE875BB1C58A275008597F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
