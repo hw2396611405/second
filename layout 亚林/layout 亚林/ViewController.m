@@ -28,9 +28,43 @@
         make.bottom.and.right.equalTo(self.view).with.offset(-100);
     }];
     view.backgroundColor = [UIColor redColor];
+
+    
     UIButton *btn = [[UIButton alloc]init];
     btn.backgroundColor = [UIColor yellowColor];
     [view addSubview:btn];
+    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+        //make.centerX.equalTo(view);
+       // make.height.and.width.mas_equalTo(@50);
+        make.centerY.equalTo(self.view);
+        make.left.equalTo(view).with.offset(5);
+        make.height.mas_equalTo(@50);
+       
+//        make.width.mas_equalTo(@(width));
+    }];
+    
+    UIButton *btn1 = [[UIButton alloc]init];
+    btn1.backgroundColor = [UIColor blueColor];
+    [view addSubview:btn1];
+    [btn1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(view);
+        make.centerX.equalTo(view);
+        make.left.equalTo(btn.mas_right).with.offset(5);
+        
+        make.height.mas_equalTo(@50);
+        make.width.mas_equalTo(btn);
+    }];
+    UIButton *btn2 = [[UIButton alloc]init];
+    btn2.backgroundColor = [UIColor greenColor];
+    [view addSubview:btn2];
+    [btn2 mas_makeConstraints:^(MASConstraintMaker *make) {
+         make.centerY.equalTo(view);
+        make.left.equalTo(btn1.mas_right).with.offset(5);
+        make.right.equalTo(view).with.offset(-5);
+        make.height.mas_equalTo(@50);
+        make.width.mas_equalTo(btn1);
+        
+    }];
     
 }
 
