@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7BFCF8661C59B0E600A7013F"
-               BuildableName = "&#x7ebf;&#x78b0;&#x649e;.app"
-               BlueprintName = "&#x7ebf;&#x78b0;&#x649e;"
-               ReferencedContainer = "container:&#x7ebf;&#x78b0;&#x649e;.xcodeproj">
+               BlueprintIdentifier = "7B6F66E21C5AF3DC00A96FAB"
+               BuildableName = "&#x81ea;&#x5b9a;&#x4e49;tabbar.app"
+               BlueprintName = "&#x81ea;&#x5b9a;&#x4e49;tabbar"
+               ReferencedContainer = "container:&#x81ea;&#x5b9a;&#x4e49;tabbar.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7BFCF8661C59B0E600A7013F"
-            BuildableName = "&#x7ebf;&#x78b0;&#x649e;.app"
-            BlueprintName = "&#x7ebf;&#x78b0;&#x649e;"
-            ReferencedContainer = "container:&#x7ebf;&#x78b0;&#x649e;.xcodeproj">
+            BlueprintIdentifier = "7B6F66E21C5AF3DC00A96FAB"
+            BuildableName = "&#x81ea;&#x5b9a;&#x4e49;tabbar.app"
+            BlueprintName = "&#x81ea;&#x5b9a;&#x4e49;tabbar"
+            ReferencedContainer = "container:&#x81ea;&#x5b9a;&#x4e49;tabbar.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7BFCF8661C59B0E600A7013F"
-            BuildableName = "&#x7ebf;&#x78b0;&#x649e;.app"
-            BlueprintName = "&#x7ebf;&#x78b0;&#x649e;"
-            ReferencedContainer = "container:&#x7ebf;&#x78b0;&#x649e;.xcodeproj">
+            BlueprintIdentifier = "7B6F66E21C5AF3DC00A96FAB"
+            BuildableName = "&#x81ea;&#x5b9a;&#x4e49;tabbar.app"
+            BlueprintName = "&#x81ea;&#x5b9a;&#x4e49;tabbar"
+            ReferencedContainer = "container:&#x81ea;&#x5b9a;&#x4e49;tabbar.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7BFCF8661C59B0E600A7013F"
-            BuildableName = "&#x7ebf;&#x78b0;&#x649e;.app"
-            BlueprintName = "&#x7ebf;&#x78b0;&#x649e;"
-            ReferencedContainer = "container:&#x7ebf;&#x78b0;&#x649e;.xcodeproj">
+            BlueprintIdentifier = "7B6F66E21C5AF3DC00A96FAB"
+            BuildableName = "&#x81ea;&#x5b9a;&#x4e49;tabbar.app"
+            BlueprintName = "&#x81ea;&#x5b9a;&#x4e49;tabbar"
+            ReferencedContainer = "container:&#x81ea;&#x5b9a;&#x4e49;tabbar.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
