@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B6F671B1C5B564000A96FAB /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F67141C5B564000A96FAB /* 1.jpeg */; settings = {ASSET_TAGS = (); }; };
+		7B6F671C1C5B564000A96FAB /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F67151C5B564000A96FAB /* down.png */; settings = {ASSET_TAGS = (); }; };
+		7B6F671D1C5B564000A96FAB /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F67161C5B564000A96FAB /* pause.png */; settings = {ASSET_TAGS = (); }; };
+		7B6F671E1C5B564000A96FAB /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F67171C5B564000A96FAB /* play.png */; settings = {ASSET_TAGS = (); }; };
+		7B6F671F1C5B564000A96FAB /* up.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F67181C5B564000A96FAB /* up.png */; settings = {ASSET_TAGS = (); }; };
+		7B6F67201C5B564000A96FAB /* 情非得已.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F67191C5B564000A96FAB /* 情非得已.lrc */; settings = {ASSET_TAGS = (); }; };
+		7B6F67211C5B564000A96FAB /* 情非得已.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F671A1C5B564000A96FAB /* 情非得已.mp3 */; settings = {ASSET_TAGS = (); }; };
+		7B6F67241C5B56A000A96FAB /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6F67231C5B56A000A96FAB /* MusicViewController.m */; settings = {ASSET_TAGS = (); }; };
 		7BE875A41C58A275008597F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE875A31C58A275008597F4 /* main.m */; };
 		7BE875A71C58A275008597F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE875A61C58A275008597F4 /* AppDelegate.m */; };
 		7BE875AD1C58A275008597F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BE875AB1C58A275008597F4 /* Main.storyboard */; };
@@ -19,6 +27,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B6F67141C5B564000A96FAB /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
+		7B6F67151C5B564000A96FAB /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down.png; sourceTree = "<group>"; };
+		7B6F67161C5B564000A96FAB /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		7B6F67171C5B564000A96FAB /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		7B6F67181C5B564000A96FAB /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up.png; sourceTree = "<group>"; };
+		7B6F67191C5B564000A96FAB /* 情非得已.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "情非得已.lrc"; sourceTree = "<group>"; };
+		7B6F671A1C5B564000A96FAB /* 情非得已.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "情非得已.mp3"; sourceTree = "<group>"; };
+		7B6F67221C5B56A000A96FAB /* MusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicViewController.h; sourceTree = "<group>"; };
+		7B6F67231C5B56A000A96FAB /* MusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicViewController.m; sourceTree = "<group>"; };
+		7B6F67251C5B6AD500A96FAB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		7BE8759F1C58A275008597F4 /* today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = today.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BE875A31C58A275008597F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7BE875A51C58A275008597F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -45,6 +63,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B6F67121C5B55C400A96FAB /* music */ = {
+			isa = PBXGroup;
+			children = (
+				7B6F67141C5B564000A96FAB /* 1.jpeg */,
+				7B6F67151C5B564000A96FAB /* down.png */,
+				7B6F67161C5B564000A96FAB /* pause.png */,
+				7B6F67171C5B564000A96FAB /* play.png */,
+				7B6F67181C5B564000A96FAB /* up.png */,
+				7B6F67191C5B564000A96FAB /* 情非得已.lrc */,
+				7B6F671A1C5B564000A96FAB /* 情非得已.mp3 */,
+			);
+			path = music;
+			sourceTree = "<group>";
+		};
+		7B6F67131C5B561400A96FAB /* music */ = {
+			isa = PBXGroup;
+			children = (
+				7B6F67221C5B56A000A96FAB /* MusicViewController.h */,
+				7B6F67231C5B56A000A96FAB /* MusicViewController.m */,
+			);
+			name = music;
+			path = video/music;
+			sourceTree = "<group>";
+		};
 		7BE875961C58A275008597F4 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				7BE875A31C58A275008597F4 /* main.m */,
+				7B6F67251C5B6AD500A96FAB /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -116,6 +159,7 @@
 		7BFCF88A1C59F19200A7013F /* image */ = {
 			isa = PBXGroup;
 			children = (
+				7B6F67121C5B55C400A96FAB /* music */,
 				7BFCF88B1C59F19200A7013F /* Icon */,
 			);
 			path = image;
@@ -147,6 +191,7 @@
 		7BFCF88E1C59F19200A7013F /* Section */ = {
 			isa = PBXGroup;
 			children = (
+				7B6F67131C5B561400A96FAB /* music */,
 				7BFCF88F1C59F19200A7013F /* find */,
 				7BFCF8931C59F19200A7013F /* fluent */,
 				7BFCF8971C59F19200A7013F /* Mine */,
@@ -346,10 +391,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B6F671F1C5B564000A96FAB /* up.png in Resources */,
 				7BE875BF1C58C883008597F4 /* iconfont-favorite.png in Resources */,
+				7B6F671B1C5B564000A96FAB /* 1.jpeg in Resources */,
+				7B6F671E1C5B564000A96FAB /* play.png in Resources */,
+				7B6F671D1C5B564000A96FAB /* pause.png in Resources */,
+				7B6F671C1C5B564000A96FAB /* down.png in Resources */,
+				7B6F67201C5B564000A96FAB /* 情非得已.lrc in Resources */,
 				7BE875B51C58A275008597F4 /* LaunchScreen.storyboard in Resources */,
 				7BE875BD1C58C875008597F4 /* star_faved@2x.png in Resources */,
 				7BE875B21C58A275008597F4 /* Assets.xcassets in Resources */,
+				7B6F67211C5B564000A96FAB /* 情非得已.mp3 in Resources */,
 				7BE875AD1C58A275008597F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BE875A71C58A275008597F4 /* AppDelegate.m in Sources */,
+				7B6F67241C5B56A000A96FAB /* MusicViewController.m in Sources */,
 				7BFCF8A21C59F1FA00A7013F /* QZTableViewController.m in Sources */,
 				7BE875A41C58A275008597F4 /* main.m in Sources */,
 				7BE875B01C58A275008597F4 /* today.xcdatamodeld in Sources */,
@@ -474,6 +527,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = $SRCROOT/today/PrefixHeader.pch;
 				INFOPLIST_FILE = today/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wanghui.today;
@@ -485,6 +539,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = $SRCROOT/today/PrefixHeader.pch;
 				INFOPLIST_FILE = today/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wanghui.today;
