@@ -29,14 +29,34 @@
 @property (nonatomic, strong)NSMutableDictionary *licDic;//存放歌词
 @property (assign,nonatomic)NSInteger line;
 @property(nonatomic,strong)NSArray *dataArr;
+@property (nonatomic, assign)int row;//记录当前播放的下标
+
+//创建AVPlayerItem,每一首歌曲都是一个item对象
+@property (nonatomic,strong)AVPlayerItem *avPlayItem;
 
 @end
 
 @implementation MusicViewController
 
+//懒加载
+//- (NSMutableArray  *)dataArr {
+//    if (_dataArr == nil) {
+//        NSArray *data =@[@"情非得已",@"情非得已",@"情非得已"];
+//        for (int i = 0; i < data.count; i ++) {
+//            NSString *path = [[NSBundle mainBundle]pathForResource:[NSString stringWithFormat:@"%@",data[i]] ofType:@"mp3"];
+//            NSURL *url = [NSURL fileURLWithPath:path];
+//            self.dataArr = [[NSMutableArray alloc]init];
+//            [self.dataArr addObject:url];
+//        }
+//       
+//    }
+//    return _dataArr;
+//}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    //默认标记 后面默认标记第一首歌
+    self.row = 0;
     self.dataArr = @[@"情非得已",@"情非得已",@"情非得已"];
     NSString *path = [[NSBundle mainBundle]pathForResource:[NSString stringWithFormat:@"%@",_dataArr[0]] ofType:@"mp3"];
     NSURL *url = [NSURL fileURLWithPath:path];
@@ -84,6 +104,16 @@
 
 - (IBAction)downButton:(UIButton *)sender {
     [self.progressUpdataTimer invalidate];
+//    if (self.row >= self.dataArr.count - 1) {
+//        NSLog(@"已经是最后一首了,没有下一首了");
+//        return;
+//    }
+//    self.row ++;
+//    //获取URL
+//    NSString *urlStr = [self.dataArr objectAtIndex:self.row];
+//    
+    
+    
 }
 
 - (IBAction)upButton:(UIButton *)sender {
