@@ -53,25 +53,54 @@
     [self parserLrc];
 
 }
-//修改进度条
+//播放或暂停
 - (IBAction)changeProgress:(UISlider *)sender {
     self.audioPlayer.currentTime = sender.value;
 }
 
 //paly事件
 - (IBAction)playButton:(UIButton *)sender {
+    if (!self.isPlay) {
+        //播放
+        [sender setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
+        self.isPlay = !self.isPlay;
+        //播放
+        [self.audioPlayer play];
+        //修改slider 的最大值
+        self.progressSlider.maximumValue = self.audioPlayer.duration;
+        //通过计时器观测当前时间
+        self.progressUpdataTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(changTime) userInfo:nil repeats:YES];
+        //显示总时间
+        self.totalTimeLabel.text = [self timeStringFromSecond:self.audioPlayer.duration];
+    }else {
+        //暂停
+        [self.audioPlayer pause];
+        [sender setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
+        self.isPlay = !self.isPlay;
     
+    }
 }
+
+
 - (IBAction)downButton:(UIButton *)sender {
+    [self.progressUpdataTimer invalidate];
 }
 
 - (IBAction)upButton:(UIButton *)sender {
+    [self.progressUpdataTimer invalidate];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
+    [self .progressUpdataTimer invalidate];
+    [self.audioPlayer play];
+
+}
+
 
 //对歌词进行解析
 - (void)parserLrc {
@@ -102,6 +131,28 @@
 
 }
 
+
+//计时器关联方法
+- (void)changTime {
+    NSString *currentString = [self timeStringFromSecond:self.audioPlayer.currentTime];
+    self.progressSlider.value =  self.audioPlayer.currentTime;
+    self.currentTimeLabel.text = currentString;
+    //判断数组是否包含某个元素
+    if ([self.lrcTimeAry containsObject:currentString]) {
+        self.line = [self.lrcTimeAry indexOfObject:currentString];
+        [self.lrcTableView reloadData];
+        //选中tableView的这一行
+        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:self.line inSection:0];
+        [self.lrcTableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+    }
+
+
+}
+
+- (NSString *)timeStringFromSecond:(NSInteger)second {
+    return [NSString stringWithFormat:@"%02ld:%02ld",second/60,second %60];
+}
+
 #pragma mark UITableViewDataSource;
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
@@ -113,7 +164,7 @@
     NSString *key = self.lrcTimeAry[indexPath.row];
     cell.textLabel.text = self.licDic[key];
     //改变textLabel 的样式
-    if (indexPath.row == self.licDic) {
+    if (indexPath.row == self.line) {
         cell.textLabel.font = [UIFont systemFontOfSize:20.0];
         cell.textLabel.textColor = [UIColor blueColor];
     } else {
@@ -122,6 +173,21 @@
     }
     
     return cell;
+}
+
+//远程控制
+-(void)remoteControlReceivedWithEvent:(UIEvent *)event {
+    switch (event.subtype) {
+        case UIEventSubtypeRemoteControlPlay:
+            NSLog(@"播放");
+            break;
+            case UIEventSubtypeRemoteControlStop:
+            
+            
+        default:
+            break;
+    }
+
 }
 
 

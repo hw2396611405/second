@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +18,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //创建音频会话
+    AVAudioSession *sesson = [AVAudioSession sharedInstance];
+    //设置支持后台播放
+    [sesson setCategory:AVAudioSessionCategoryPlayback error:nil];
+    //激活会话
+    [sesson setActive:YES error:nil];
+    //支持远程控制
+    [application beginReceivingRemoteControlEvents];
+    
+    
     return YES;
 }
 
