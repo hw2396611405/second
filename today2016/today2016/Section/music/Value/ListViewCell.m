@@ -20,4 +20,14 @@
     // Configure the view for the selected state
 }
 
+//给cell控件赋值
+-(void)setModel:(listModel *)model {
+    self.titleLabel.text = model.title;
+    self.autorLabel.text = model.nickname;
+    [self.photoView sd_setImageWithURL:[NSURL URLWithString:model.coverSmall]];
+    NSInteger totalTime =[model.duration floatValue];
+    self.platTimeLabel.text = [NSString stringWithFormat:@"%ld:%ld",totalTime/60,totalTime%60];
+
+}
+
 @end

@@ -9,5 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface listModel : NSObject
+@property(nonatomic, copy)NSString *coverSmall;
+@property(nonatomic, copy)NSString *nickname;
+@property(nonatomic, copy)NSString *playUrl64;
+@property(nonatomic, copy)NSString *title;
+@property(nonatomic, strong)NSNumber * duration;
 
+-(instancetype)initWithDic:(NSDictionary *)dic;
 @end

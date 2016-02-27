@@ -21,5 +21,12 @@
 
     // Configure the view for the selected state
 }
+-(void)setModel:(RankModel *)model {
+    self.titlelabel.text = model.title;
+    self.tracklabel.text = [model.tracks stringValue];
+    self.introlLabel.text = model.intro;
+    [self.photoView sd_setImageWithURL:[NSURL  URLWithString: model.coverSmall]];
+
+}
 
 @end

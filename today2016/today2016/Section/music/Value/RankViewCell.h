@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RankModel.h"
 
 @interface RankViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;
@@ -14,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *titlelabel;
 @property (weak, nonatomic) IBOutlet UILabel *tracklabel;
 @property (weak, nonatomic) IBOutlet UILabel *introlLabel;
+@property (nonatomic,strong)RankModel  *model;
 
 @end

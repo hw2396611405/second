@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "listModel.h"
 
 @interface ListViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *photoView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *autorLabel;
+@property (weak, nonatomic) IBOutlet UILabel *platTimeLabel;
+@property (strong,nonatomic) listModel *model;
 
 @end

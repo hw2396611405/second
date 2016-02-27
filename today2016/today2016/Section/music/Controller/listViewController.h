@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface listViewController : UITableViewController
+@property (nonatomic,assign)NSInteger listID;
+@property (nonatomic,retain)NSString *text;
 
 @end

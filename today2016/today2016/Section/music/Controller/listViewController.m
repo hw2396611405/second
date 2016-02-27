@@ -7,22 +7,78 @@
 //
 
 #import "listViewController.h"
+#import "ListViewCell.h"
+#import "PlayViewController.h"
+#import "listModel.h"
 
 @interface listViewController ()
-
+@property(nonatomic,strong)NSMutableArray *dataArray;
+@property(nonatomic,assign)NSInteger page;
 @end
 
 @implementation listViewController
+-(NSMutableArray *)dataArray {
+    if (!_dataArray) {
+        self.dataArray = [[NSMutableArray alloc]initWithCapacity:1];
+    }
+    return _dataArray;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //xib 使用注册cell
+    [self.tableView registerNib:[UINib nibWithNibName:@"ListViewCell" bundle:nil] forCellReuseIdentifier:@"listCell"];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    //网络请求
+    [self loadDataFromServer];
+    //添加下拉刷新
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        self.page = 1;
+        [self loadDataFromServer];
+    }];
+    //添加上拉加载
+    self.tableView.mj_footer = [MJRefreshAutoFooter footerWithRefreshingBlock:^{
+        self.page ++;
+        [self loadDataFromServer];
+    }];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
 }
+
+-(void)loadDataFromServer {
+    NSString *listURL = [NSString stringWithFormat:kListUrl,self.listID];
+    //拼接URL
+    NSURL *url = [NSURL URLWithString:[listURL stringByReplacingOccurrencesOfString:@"page" withString:[NSString stringWithFormat:@"%ld",self.page]]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURLSession *session = [NSURLSession sharedSession];
+    //创建任务
+    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        NSArray *arr = dic[@"tracks"][@"list"];
+        //判断page
+        if (self.page == 1) {
+            [self.tableView.mj_header endRefreshing];
+            [self.dataArray removeAllObjects];
+        }else {
+            [self.tableView.mj_footer endRefreshing];
+        }
+        
+        for (NSDictionary *dic in arr) {
+            listModel *model = [[listModel alloc]initWithDic:dic];
+            [self.dataArray addObject:model];
+        }
+        //将数据刷新和界面加载交给主线程
+        [self performSelectorOnMainThread:@selector(reload2) withObject:nil waitUntilDone:YES];
+        
+    } ];
+    [dataTask resume];
+}
+-(void)reload2
+{
+    [self.tableView reloadData];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -32,24 +88,24 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return self.dataArray.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
+    ListViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"listCell" forIndexPath:indexPath];
+    cell.model = self.dataArray[indexPath.row];
+  
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -101,14 +157,15 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+   
+    
+    
 }
-*/
+
 
 @end

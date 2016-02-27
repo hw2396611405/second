@@ -18,7 +18,9 @@
 }
 
 -(void)setValue:(id)value forUndefinedKey:(NSString *)key {
-
+    if ([key  isEqual: @"id"]) {
+        self.ID = value;
+    }
 }
 
 @end

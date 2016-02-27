@@ -8,12 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RankModel : NSObject
-@property (nonatomic,weak)NSString *title;
-@property (nonatomic,weak)NSString *tracks;
-@property (nonatomic,retain)NSString *intro;
-@property (nonatomic,retain)NSString *coverSmall;
 
+@interface RankModel : NSObject
+@property (nonatomic,copy)NSString *title;
+@property (nonatomic,weak)NSNumber *tracks;
+@property (nonatomic,copy)NSString *intro;
+@property (nonatomic,copy)NSString *coverSmall;
+@property (nonatomic,retain)NSNumber *ID;
 - (instancetype)initWithDic:(NSDictionary *)dic;
 @end
 
