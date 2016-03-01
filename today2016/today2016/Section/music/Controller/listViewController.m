@@ -106,6 +106,16 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    PlayViewController *playVC = [storyboard instantiateViewControllerWithIdentifier:@"PlayViewController"];
+    playVC.dataArray = self.dataArray;
+    playVC.index = indexPath.row;
+    [self.navigationController pushViewController:playVC animated:YES];
+    
+}
+
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -161,11 +171,11 @@
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-   
-    
-    
-}
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//   
+//    
+//    
+//}
 
 
 @end
