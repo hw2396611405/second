@@ -33,10 +33,8 @@
         _imageDataSource = imageDataSource;
     }
     NSMutableArray *arr = [[NSMutableArray alloc]initWithCapacity:1];
-    NSLog(@"----%ld",self.imageDataSource.count);
     for (MusicLBT *model in imageDataSource) {
         [arr addObject:model.pic];
-        NSLog(@"%@",model.pic);
     }
     self.LBTView.imageURLStringsGroup = [NSArray arrayWithArray:arr];
 }

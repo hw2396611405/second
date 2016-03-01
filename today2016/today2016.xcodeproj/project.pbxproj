@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B91543F1C8526890077A9E3 /* JPTDModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B91543E1C8526890077A9E3 /* JPTDModel.m */; settings = {ASSET_TAGS = (); }; };
+		7B9154421C853D280077A9E3 /* commonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9154411C853D280077A9E3 /* commonModel.m */; settings = {ASSET_TAGS = (); }; };
+		7B91544F1C8592E20077A9E3 /* listHeaderMOdel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B91544E1C8592E20077A9E3 /* listHeaderMOdel.m */; settings = {ASSET_TAGS = (); }; };
+		7B9154571C8595860077A9E3 /* FirstListHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9154561C8595860077A9E3 /* FirstListHeader.m */; settings = {ASSET_TAGS = (); }; };
+		7B9154591C8595960077A9E3 /* FirstListHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B9154581C8595960077A9E3 /* FirstListHeader.xib */; settings = {ASSET_TAGS = (); }; };
 		7BC6C7B81C83F1DA00F73768 /* LBTViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC6C7B61C83F1DA00F73768 /* LBTViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		7BC6C7B91C83F1DA00F73768 /* LBTViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BC6C7B71C83F1DA00F73768 /* LBTViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		7BC6C7E01C841C2000F73768 /* NSData+SDDataCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC6C7D01C841C2000F73768 /* NSData+SDDataCache.m */; settings = {ASSET_TAGS = (); }; };
@@ -98,6 +103,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B91543D1C8526890077A9E3 /* JPTDModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPTDModel.h; sourceTree = "<group>"; };
+		7B91543E1C8526890077A9E3 /* JPTDModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPTDModel.m; sourceTree = "<group>"; };
+		7B9154401C853D280077A9E3 /* commonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commonModel.h; sourceTree = "<group>"; };
+		7B9154411C853D280077A9E3 /* commonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = commonModel.m; sourceTree = "<group>"; };
+		7B91544D1C8592E20077A9E3 /* listHeaderMOdel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = listHeaderMOdel.h; sourceTree = "<group>"; };
+		7B91544E1C8592E20077A9E3 /* listHeaderMOdel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = listHeaderMOdel.m; sourceTree = "<group>"; };
+		7B9154551C8595860077A9E3 /* FirstListHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstListHeader.h; sourceTree = "<group>"; };
+		7B9154561C8595860077A9E3 /* FirstListHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstListHeader.m; sourceTree = "<group>"; };
+		7B9154581C8595960077A9E3 /* FirstListHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstListHeader.xib; sourceTree = "<group>"; };
 		7BC6C7B51C83F1DA00F73768 /* LBTViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBTViewCell.h; sourceTree = "<group>"; };
 		7BC6C7B61C83F1DA00F73768 /* LBTViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBTViewCell.m; sourceTree = "<group>"; };
 		7BC6C7B71C83F1DA00F73768 /* LBTViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBTViewCell.xib; sourceTree = "<group>"; };
@@ -292,6 +306,12 @@
 			children = (
 				7BC6C7E81C841F9F00F73768 /* MusicLBT.h */,
 				7BC6C7E91C841F9F00F73768 /* MusicLBT.m */,
+				7B91543D1C8526890077A9E3 /* JPTDModel.h */,
+				7B91543E1C8526890077A9E3 /* JPTDModel.m */,
+				7B9154401C853D280077A9E3 /* commonModel.h */,
+				7B9154411C853D280077A9E3 /* commonModel.m */,
+				7B91544D1C8592E20077A9E3 /* listHeaderMOdel.h */,
+				7B91544E1C8592E20077A9E3 /* listHeaderMOdel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -316,6 +336,9 @@
 				7BC6C8151C8467E400F73768 /* JPTDViewCell.h */,
 				7BC6C8161C8467E400F73768 /* JPTDViewCell.m */,
 				7BC6C8171C8467E400F73768 /* JPTDViewCell.xib */,
+				7B9154551C8595860077A9E3 /* FirstListHeader.h */,
+				7B9154561C8595860077A9E3 /* FirstListHeader.m */,
+				7B9154581C8595960077A9E3 /* FirstListHeader.xib */,
 			);
 			path = Music;
 			sourceTree = "<group>";
@@ -886,6 +909,7 @@
 				7BC6C8141C844DD600F73768 /* MusicViewHeader.xib in Resources */,
 				7BD804AE1C81B86800884742 /* playing_btn_next_n@2x.png in Resources */,
 				7BC6C7B91C83F1DA00F73768 /* LBTViewCell.xib in Resources */,
+				7B9154591C8595960077A9E3 /* FirstListHeader.xib in Resources */,
 				7BECAE041C802790009D8CB6 /* Assets.xcassets in Resources */,
 				7BD804AA1C81B86800884742 /* cm2_play_disc@2x.png in Resources */,
 				7BD804B01C81B86800884742 /* playing_btn_pause_n@2x.png in Resources */,
@@ -920,12 +944,14 @@
 				7BECAEB71C80804F009D8CB6 /* UIScrollView+MJExtension.m in Sources */,
 				7BECAE721C80803E009D8CB6 /* SDWebImageManager.m in Sources */,
 				7BC6C8131C844DD600F73768 /* MusicViewHeader.m in Sources */,
+				7B91544F1C8592E20077A9E3 /* listHeaderMOdel.m in Sources */,
 				7BECAEAE1C80804F009D8CB6 /* MJRefreshAutoStateFooter.m in Sources */,
 				7BECAE791C80803E009D8CB6 /* UIView+WebCacheOperation.m in Sources */,
 				7BECAEB11C80804F009D8CB6 /* MJRefreshBackStateFooter.m in Sources */,
 				7BC6C7E01C841C2000F73768 /* NSData+SDDataCache.m in Sources */,
 				7BC6C7E31C841C2000F73768 /* TADotView.m in Sources */,
 				7BECAEA71C80804F009D8CB6 /* MJRefreshAutoFooter.m in Sources */,
+				7B9154571C8595860077A9E3 /* FirstListHeader.m in Sources */,
 				7BC6C7E61C841C2000F73768 /* SDCycleScrollView.m in Sources */,
 				7BECAEAB1C80804F009D8CB6 /* MJRefreshHeader.m in Sources */,
 				7BECAEAC1C80804F009D8CB6 /* MJRefreshAutoGifFooter.m in Sources */,
@@ -943,6 +969,7 @@
 				7BECAEAA1C80804F009D8CB6 /* MJRefreshFooter.m in Sources */,
 				7BECAEAD1C80804F009D8CB6 /* MJRefreshAutoNormalFooter.m in Sources */,
 				7BECAE761C80803E009D8CB6 /* UIImage+MultiFormat.m in Sources */,
+				7B9154421C853D280077A9E3 /* commonModel.m in Sources */,
 				7BECAEA81C80804F009D8CB6 /* MJRefreshBackFooter.m in Sources */,
 				7BECAE431C8055D2009D8CB6 /* listModel.m in Sources */,
 				7BECAE311C805547009D8CB6 /* RankViewController.m in Sources */,
@@ -951,6 +978,7 @@
 				7BECAEB01C80804F009D8CB6 /* MJRefreshBackNormalFooter.m in Sources */,
 				7BECAE741C80803E009D8CB6 /* UIButton+WebCache.m in Sources */,
 				7BECAEB91C80804F009D8CB6 /* UIView+MJExtension.m in Sources */,
+				7B91543F1C8526890077A9E3 /* JPTDModel.m in Sources */,
 				7BC6C8051C843EE000F73768 /* AFNetworkReachabilityManager.m in Sources */,
 				7BC6C8181C8467E400F73768 /* JPTDViewCell.m in Sources */,
 				7BC6C7B81C83F1DA00F73768 /* LBTViewCell.m in Sources */,

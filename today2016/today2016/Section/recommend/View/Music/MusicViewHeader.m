@@ -8,7 +8,13 @@
 
 #import "MusicViewHeader.h"
 
+@interface MusicViewHeader ()
+
+@end
+
 @implementation MusicViewHeader
+- (IBAction)moreBtn:(id)sender {
+}
 
 - (void)awakeFromNib {
     // Initialization code

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+
+
 @interface MusicViewHeader : UICollectionReusableView
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end

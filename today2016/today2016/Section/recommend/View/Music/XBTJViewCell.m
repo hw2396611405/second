@@ -10,6 +10,20 @@
 
 @implementation XBTJViewCell
 
+//通过setter方法赋值
+-(void)setModel:(commonModel *)model {
+    //_model = model;
+    [self.photoView sd_setImageWithURL:[NSURL URLWithString:model.coverLarge] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        
+    }];
+    
+    
+    self.titleLabel.text = model.trackTitle;
+    self.headerLine.text = model.title;
+}
+
+
+
 - (void)awakeFromNib {
     // Initialization code
 }

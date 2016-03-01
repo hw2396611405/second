@@ -10,6 +10,6 @@
 
 @interface MusicLBT : NSObject
 @property (nonatomic,strong)NSString *pic;
-
+@property (nonatomic,strong)NSNumber *albumId;
 -(instancetype)initWithDic:(NSDictionary *)dic;
 @end

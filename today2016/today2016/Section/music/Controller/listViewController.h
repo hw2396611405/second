@@ -11,5 +11,6 @@
 @interface listViewController : UITableViewController
 @property (nonatomic,assign)NSInteger listID;
 @property (nonatomic,retain)NSString *text;
+@property (nonatomic,strong)NSString *musicTitle;
 
 @end

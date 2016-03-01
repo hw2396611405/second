@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface XBTJViewCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *photoView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *headerLine;
+@property (nonatomic,strong) commonModel *model;
 
 @end
