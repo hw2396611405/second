@@ -30,9 +30,7 @@
     //xib 使用注册cell
     [self.tableView registerNib:[UINib nibWithNibName:@"ListViewCell" bundle:nil] forCellReuseIdentifier:@"listCell"];
     
-    //注册view
-    NSArray *nib = [[NSBundle mainBundle]loadNibNamed:@"FirstListHeader" owner:self options:nil];
-    UIView *firstListHeaderView = [nib objectAtIndex:0];
+   
     
     
     //网络请求

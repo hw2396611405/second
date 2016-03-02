@@ -9,5 +9,18 @@
 #import <Foundation/Foundation.h>
 
 @interface listHeaderMOdel : NSObject
+@property (nonatomic,strong)NSString *title;
+@property (nonatomic,strong)NSString *coverSmall;
+@property (nonatomic,strong)NSString *coverMiddle;
+@property (nonatomic,strong)NSString  *nickname;
+@property (nonatomic,strong)NSNumber *createdAt;
+@property (nonatomic,strong)NSNumber *updatedAt;
+@property (nonatomic,strong)NSString *tags;
+@property (nonatomic,strong)NSNumber *playTimes;
+@property (nonatomic,strong)NSString *intro;
+@property (nonatomic,strong)NSString *avatarPath;
+
+-(instancetype)initWithDic:(NSDictionary *)dic;
+
 
 @end

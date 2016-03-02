@@ -12,7 +12,7 @@
 #import "MusicViewHeader.h"
 #import "JPTDViewCell.h"
 #import "XBTJViewCell.h"
-#import "listViewController.h"
+#import "ListMusicViewController.h"
 #import "FirstListHeader.h"
 
 @interface MusicViewController ()<UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
@@ -192,13 +192,16 @@
 #pragma mark 实现跳转
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     //找到目标控制器
-      UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    listViewController *listVC = [storyboard instantiateViewControllerWithIdentifier:@"listViewController"];
-    if (indexPath.section == 0) {
-       // listVC.tableView.tableHeaderView =
-    }
-
+      UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ListMusicViewController" bundle:nil];
+    ListMusicViewController *listVC = [storyboard instantiateViewControllerWithIdentifier:@"ListMusicViewController"];
+    if (indexPath.section == 1) {
+        
+    }else if (indexPath.section == 2) {
     
+    }else {
+        commonModel *model = self.RMTJArr[(indexPath.section - 3)*3 +indexPath.item];
+        listVC.albumId = [model.albumId integerValue];
+    }
     [self.navigationController pushViewController:listVC animated:YES];
 }
 
