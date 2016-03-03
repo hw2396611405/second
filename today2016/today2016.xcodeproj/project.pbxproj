@@ -27,6 +27,12 @@
 		7BACCF081C8681080077637C /* btn_back_n@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BACCF041C8681080077637C /* btn_back_n@2x.png */; };
 		7BACCF091C8681080077637C /* btn_back_n@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BACCF051C8681080077637C /* btn_back_n@3x.png */; };
 		7BC4CB0F1C86C44900888633 /* listMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC4CB0E1C86C44900888633 /* listMusicModel.m */; };
+		7BC4CB191C87179A00888633 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC4CB171C87179A00888633 /* VideoViewController.m */; };
+		7BC4CB1D1C8719AE00888633 /* VideoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC4CB1C1C8719AE00888633 /* VideoViewCell.m */; };
+		7BC4CB211C871C5F00888633 /* VideoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC4CB1F1C871C5F00888633 /* VideoHeaderView.m */; };
+		7BC4CB221C871C5F00888633 /* VideoHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BC4CB201C871C5F00888633 /* VideoHeaderView.xib */; };
+		7BC4CB311C87CDEE00888633 /* listVideoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC4CB2E1C87CDEE00888633 /* listVideoViewController.storyboard */; };
+		7BC4CB321C87CDEE00888633 /* listVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC4CB2F1C87CDEE00888633 /* listVideoViewController.swift */; };
 		7BC6C7B81C83F1DA00F73768 /* LBTViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC6C7B61C83F1DA00F73768 /* LBTViewCell.m */; };
 		7BC6C7B91C83F1DA00F73768 /* LBTViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BC6C7B71C83F1DA00F73768 /* LBTViewCell.xib */; };
 		7BC6C7E01C841C2000F73768 /* NSData+SDDataCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC6C7D01C841C2000F73768 /* NSData+SDDataCache.m */; };
@@ -145,6 +151,16 @@
 		7BACCF051C8681080077637C /* btn_back_n@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_back_n@3x.png"; sourceTree = "<group>"; };
 		7BC4CB0D1C86C44900888633 /* listMusicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = listMusicModel.h; path = ../listMusicModel.h; sourceTree = "<group>"; };
 		7BC4CB0E1C86C44900888633 /* listMusicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = listMusicModel.m; path = ../listMusicModel.m; sourceTree = "<group>"; };
+		7BC4CB161C87179A00888633 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		7BC4CB171C87179A00888633 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		7BC4CB1B1C8719AE00888633 /* VideoViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewCell.h; sourceTree = "<group>"; };
+		7BC4CB1C1C8719AE00888633 /* VideoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewCell.m; sourceTree = "<group>"; };
+		7BC4CB1E1C871C5F00888633 /* VideoHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoHeaderView.h; sourceTree = "<group>"; };
+		7BC4CB1F1C871C5F00888633 /* VideoHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoHeaderView.m; sourceTree = "<group>"; };
+		7BC4CB201C871C5F00888633 /* VideoHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoHeaderView.xib; sourceTree = "<group>"; };
+		7BC4CB2E1C87CDEE00888633 /* listVideoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = listVideoViewController.storyboard; sourceTree = "<group>"; };
+		7BC4CB2F1C87CDEE00888633 /* listVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = listVideoViewController.swift; sourceTree = "<group>"; };
+		7BC4CB301C87CDEE00888633 /* today2016-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "today2016-Bridging-Header.h"; sourceTree = "<group>"; };
 		7BC6C7B51C83F1DA00F73768 /* LBTViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBTViewCell.h; sourceTree = "<group>"; };
 		7BC6C7B61C83F1DA00F73768 /* LBTViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBTViewCell.m; sourceTree = "<group>"; };
 		7BC6C7B71C83F1DA00F73768 /* LBTViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBTViewCell.xib; sourceTree = "<group>"; };
@@ -758,6 +774,11 @@
 		7BECAE251C804C2C009D8CB6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7BC4CB161C87179A00888633 /* VideoViewController.h */,
+				7BC4CB171C87179A00888633 /* VideoViewController.m */,
+				7BC4CB2F1C87CDEE00888633 /* listVideoViewController.swift */,
+				7BC4CB301C87CDEE00888633 /* today2016-Bridging-Header.h */,
+				7BC4CB2E1C87CDEE00888633 /* listVideoViewController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -772,6 +793,11 @@
 		7BECAE271C804C2C009D8CB6 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				7BC4CB1B1C8719AE00888633 /* VideoViewCell.h */,
+				7BC4CB1C1C8719AE00888633 /* VideoViewCell.m */,
+				7BC4CB1E1C871C5F00888633 /* VideoHeaderView.h */,
+				7BC4CB1F1C871C5F00888633 /* VideoHeaderView.m */,
+				7BC4CB201C871C5F00888633 /* VideoHeaderView.xib */,
 			);
 			name = view;
 			path = Value;
@@ -951,6 +977,7 @@
 		7BECADE91C802790009D8CB6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "王辉";
 				TargetAttributes = {
@@ -1002,10 +1029,12 @@
 				7BACCEF61C86805C0077637C /* album_play@2x.png in Resources */,
 				7BECAEB51C80804F009D8CB6 /* MJRefresh.bundle in Resources */,
 				7BD804AC1C81B86800884742 /* images.jpg in Resources */,
+				7BC4CB311C87CDEE00888633 /* listVideoViewController.storyboard in Resources */,
 				7BECAE071C802790009D8CB6 /* LaunchScreen.storyboard in Resources */,
 				7BACCEF71C86805C0077637C /* album_play@3x.png in Resources */,
 				7BD804B11C81B86800884742 /* playing_btn_play_h@2x.png in Resources */,
 				7BC6C8141C844DD600F73768 /* MusicViewHeader.xib in Resources */,
+				7BC4CB221C871C5F00888633 /* VideoHeaderView.xib in Resources */,
 				7BD804AE1C81B86800884742 /* playing_btn_next_n@2x.png in Resources */,
 				7BACCEFF1C8680AE0077637C /* babyIcon@3x.png in Resources */,
 				7BC6C7B91C83F1DA00F73768 /* LBTViewCell.xib in Resources */,
@@ -1055,6 +1084,7 @@
 				7BC6C7E01C841C2000F73768 /* NSData+SDDataCache.m in Sources */,
 				7BC6C7E31C841C2000F73768 /* TADotView.m in Sources */,
 				7BECAEA71C80804F009D8CB6 /* MJRefreshAutoFooter.m in Sources */,
+				7BC4CB211C871C5F00888633 /* VideoHeaderView.m in Sources */,
 				7B9154571C8595860077A9E3 /* FirstListHeader.m in Sources */,
 				7BC6C7E61C841C2000F73768 /* SDCycleScrollView.m in Sources */,
 				7BECAEAB1C80804F009D8CB6 /* MJRefreshHeader.m in Sources */,
@@ -1067,6 +1097,7 @@
 				7BC6C8081C843EE000F73768 /* AFURLRequestSerialization.m in Sources */,
 				7BECADF91C802790009D8CB6 /* AppDelegate.m in Sources */,
 				7BC6C8031C843EE000F73768 /* AFHTTPRequestOperationManager.m in Sources */,
+				7BC4CB1D1C8719AE00888633 /* VideoViewCell.m in Sources */,
 				7BECAE6E1C80803E009D8CB6 /* SDWebImageCompat.m in Sources */,
 				7BECAE731C80803E009D8CB6 /* SDWebImagePrefetcher.m in Sources */,
 				7BECAEAF1C80804F009D8CB6 /* MJRefreshBackGifFooter.m in Sources */,
@@ -1089,9 +1120,11 @@
 				7BC6C8181C8467E400F73768 /* JPTDViewCell.m in Sources */,
 				7BC6C7B81C83F1DA00F73768 /* LBTViewCell.m in Sources */,
 				7BECAEB81C80804F009D8CB6 /* UIScrollView+MJRefresh.m in Sources */,
+				7BC4CB191C87179A00888633 /* VideoViewController.m in Sources */,
 				7BECAE3D1C8055A3009D8CB6 /* PlayViewController.m in Sources */,
 				7BECAE6D1C80803E009D8CB6 /* SDImageCache.m in Sources */,
 				7BC6C8041C843EE000F73768 /* AFHTTPSessionManager.m in Sources */,
+				7BC4CB321C87CDEE00888633 /* listVideoViewController.swift in Sources */,
 				7BECAE461C805624009D8CB6 /* RankViewCell.m in Sources */,
 				7BC6C8061C843EE000F73768 /* AFSecurityPolicy.m in Sources */,
 				7BC6C7E51C841C2000F73768 /* SDCollectionViewCell.m in Sources */,
@@ -1216,11 +1249,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
 				INFOPLIST_FILE = today2016/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wanghui.today2016;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "today2016/Section/video/Controller/today2016-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -1228,11 +1265,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
 				INFOPLIST_FILE = today2016/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wanghui.today2016;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "today2016/Section/video/Controller/today2016-Bridging-Header.h";
 			};
 			name = Release;
 		};
