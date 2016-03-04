@@ -11,6 +11,8 @@
 #import "VideoHeaderView.h"
 #import "LBTViewCell.h"
 #import "today2016-Swift.h"
+#import "JZTJModel.h"
+#import "LBTModel.h"
 
 
 
@@ -67,7 +69,51 @@
     
     //注册区头
     [self.collectionView registerNib:[UINib nibWithNibName:@"VideoHeaderView" bundle:nil]  forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"VideoHeaderView"];
+    
+    //解析数据
+    [self dataRequestURL:[NSURL URLWithString:JZTJURL] WithType:1];
+    [self dataRequestURL:[NSURL URLWithString:KVideoLBTURL] WithType:2];
+    [self dataRequestURL:[NSURL URLWithString:GNZPURL] WithType:3];
+    [self dataRequestURL:[NSURL URLWithString:GWZPURL] WithType:4];
+    
+    
+    
+    
+    
+    
 }
+
+//解析数据
+- (void)dataRequestURL:(NSURL *)url  WithType:(NSInteger)type {
+    
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *dataTask = [session  dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSArray *arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        
+        for (NSDictionary *dic in arr) {
+            if (type == 1) {
+                JZTJModel *model = [[JZTJModel alloc]initWithDic:dic];
+                [self.JZTJArr addObject:model];
+            }else if (type == 2) {
+                LBTModel *model = [[LBTModel alloc]initWithDic:dic];
+                [self.LBTArr addObject:model];
+            
+            }
+            
+        }
+      //把刷新数据放在主线程
+        [self performSelectorOnMainThread:@selector(reload2) withObject:nil waitUntilDone:YES];
+    }];
+    [dataTask resume];
+    
+
+}
+- (void)reload2 {
+     [self.collectionView reloadData];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -102,11 +148,19 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0 ) {
         LBTViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LBTViewCell" forIndexPath:indexPath];
+        if (self.LBTArr.count > 0) {
+
+        }
+
         return cell;
     }
     VideoViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"videoCell"forIndexPath:indexPath];
-    
-    // Configure the cell
+    if (indexPath.section == 1) {
+        if (self.JZTJArr.count > 0) {
+            cell.model = self.JZTJArr[indexPath.row];
+        }
+        
+    }
     
     return cell;
 }
@@ -115,6 +169,15 @@
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"listVideoViewController" bundle:nil];
     listVideoViewController *listVideoVC = [storyboard instantiateViewControllerWithIdentifier:@"listVideoViewController"];
+    if (indexPath.section == 1) {
+        JZTJModel *model = self.JZTJArr[indexPath.row];
+        listVideoVC.listID = [model.ID intValue];
+        
+        
+        
+        
+    }
+    
     [self presentViewController:listVideoVC animated:YES completion:nil];
     
   
@@ -161,7 +224,7 @@
         return CGSizeMake(kScreenWidth, 200);
     }
 
-    return CGSizeMake((kScreenWidth - 30)/3, 160);
+    return CGSizeMake((kScreenWidth - 30)/3, 180);
 }
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
 
@@ -191,6 +254,8 @@
         return nil;
     }else {
         VideoHeaderView *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"VideoHeaderView" forIndexPath:indexPath];
+        NSArray *arr = @[@"佳作推荐",@"国内作品",@"国外作品"];
+        header.titleLabel.text = arr[indexPath.section - 1];
         return header;
     
     }

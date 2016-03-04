@@ -23,7 +23,6 @@
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="urn-gs-53X">
                         <rect key="frame" x="0.0" y="0.0" width="167" height="110"/>
-                        <color key="backgroundColor" red="0.26744307389999999" green="1" blue="0.15327507979999999" alpha="1" colorSpace="calibratedRGB"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bit-1S-7y8">
                         <rect key="frame" x="0.0" y="90" width="167" height="20"/>

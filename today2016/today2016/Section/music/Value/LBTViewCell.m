@@ -7,7 +7,6 @@
 //
 
 #import "LBTViewCell.h"
-#import "SDCycleScrollView.h"
 #import "MusicLBT.h"
 
 @interface LBTViewCell()<SDCycleScrollViewDelegate>

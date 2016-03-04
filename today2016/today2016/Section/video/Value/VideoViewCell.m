@@ -9,5 +9,11 @@
 #import "VideoViewCell.h"
 
 @implementation VideoViewCell
+- (void)setModel:(JZTJModel *)model {
+    _model = model;
+    [self.photoView sd_setImageWithURL:[NSURL URLWithString:model.img]];
+    self.titleLabel.text = model.title;
+    self.descriptionLabel.text = model.Description;
+}
 
 @end

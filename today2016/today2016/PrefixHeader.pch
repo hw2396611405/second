@@ -14,7 +14,7 @@
 #import "MusicLBT.h"
 #import "JPTDModel.h"
 #import "commonModel.h"
-
+#import "SDCycleScrollView.h"
 
 
 
@@ -26,6 +26,19 @@
 #define MusicUrl @"http://mobile.ximalaya.com/mobile/discovery/v2/recommends?channel=and-d3&device=android&includeActivity=true&includeSpecial=true&scale=2&version=4.3.50.2"
 
 #define MusicListUrl @"http://mobile.ximalaya.com/mobile/others/ca/album/track/%ld/true/page/20?position=1&device=ios&title=%E5%B0%8F%E7%BC%96%E6%8E%A8%E8%8D%90"
+
+#define JZTJURL @"http://api2.jxvdy.com/search_list?model=video&count=6&order=time&direction=1&attr=2"
+
+#define GNZPURL @"http://api2.jxvdy.com/search_list?model=video&count=6&order=time&direction=1&attr=2"
+
+//微电影轮播图网址
+#define KVideoLBTURL @"http://api2.jxvdy.com/focus_pic?name=video"
+//国外作品网址
+#define GWZPURL @"http://api2.jxvdy.com/search_list?model=video&zone=24&order=random&count=6&attr=2"
+
+
+//微电影播放界面网址
+#define KWDYURL @"http://api2.jxvdy.com/video_info?token=(null)&id=%ld"
 
 
 

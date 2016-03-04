@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface VideoHeaderView : UICollectionReusableView
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end

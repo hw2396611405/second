@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JZTJModel.h"
 
 @interface VideoViewCell : UICollectionViewCell
+@property (strong, nonatomic) IBOutlet UIImageView *photoView;
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (strong, nonatomic) JZTJModel *model;
 
 @end
