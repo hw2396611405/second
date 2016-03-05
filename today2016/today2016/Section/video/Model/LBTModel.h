@@ -13,7 +13,7 @@
 @property (nonatomic,strong)NSString *img;
 @property (nonatomic,strong)NSNumber *ID;
 
-- (instancetype)initWithDic:(NSDictionary *)dic;
+- (LBTModel *)initWithDic:(NSDictionary *)dic;
 
 
 

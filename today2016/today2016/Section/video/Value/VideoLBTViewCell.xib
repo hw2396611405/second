@@ -6,15 +6,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="VideoLBTViewCell">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VideoLBTViewCell" id="gTV-IL-0wX" customClass="VideoLBTViewCell">
             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="263" height="137"/>
+                <rect key="frame" x="0.0" y="0.0" width="471" height="145"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gpj-ia-0nk" customClass="SDCycleScrollView">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -25,7 +24,7 @@
                 <constraint firstItem="Gpj-ia-0nk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="brH-m3-4gf"/>
                 <constraint firstAttribute="bottom" secondItem="Gpj-ia-0nk" secondAttribute="bottom" id="ch5-91-zjI"/>
             </constraints>
-            <size key="customSize" width="588" height="243"/>
+            <size key="customSize" width="1009" height="338"/>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="Gpj-ia-0nk"/>
@@ -51,7 +50,7 @@
             <connections>
                 <outlet property="VideoLBTView" destination="Gpj-ia-0nk" id="gxV-6q-o7T"/>
             </connections>
-            <point key="canvasLocation" x="419.5" y="411.5"/>
+            <point key="canvasLocation" x="208.5" y="363.5"/>
         </collectionViewCell>
     </objects>
 </document>

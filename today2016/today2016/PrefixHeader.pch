@@ -29,7 +29,7 @@
 
 #define JZTJURL @"http://api2.jxvdy.com/search_list?model=video&count=6&order=time&direction=1&attr=2"
 
-#define GNZPURL @"http://api2.jxvdy.com/search_list?model=video&count=6&order=time&direction=1&attr=2"
+#define GNZPURL @"http://api2.jxvdy.com/search_list?model=video&zone=23&order=random&count=6&attr=2"
 
 //微电影轮播图网址
 #define KVideoLBTURL @"http://api2.jxvdy.com/focus_pic?name=video"

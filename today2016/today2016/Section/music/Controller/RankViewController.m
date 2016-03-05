@@ -101,6 +101,7 @@
     if (indexPath.row < 3) {
         cell.numberLabel.textColor = @[[UIColor redColor],[UIColor orangeColor],[UIColor greenColor]][indexPath.row];
     }else {
+        
         cell.numberLabel.textColor = [UIColor grayColor];
     }
     

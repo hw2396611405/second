@@ -13,6 +13,7 @@
 #import "today2016-Swift.h"
 #import "JZTJModel.h"
 #import "LBTModel.h"
+#import "VideoLBTViewCell.h"
 
 
 
@@ -65,7 +66,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //注册cell
-    [self.collectionView registerNib:[UINib nibWithNibName:@"LBTViewCell" bundle:nil] forCellWithReuseIdentifier:@"LBTViewCell"];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"VideoLBTViewCell" bundle:nil] forCellWithReuseIdentifier:@"VideoLBTViewCell"];
+  
     
     //注册区头
     [self.collectionView registerNib:[UINib nibWithNibName:@"VideoHeaderView" bundle:nil]  forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"VideoHeaderView"];
@@ -99,8 +101,14 @@
             }else if (type == 2) {
                 LBTModel *model = [[LBTModel alloc]initWithDic:dic];
                 [self.LBTArr addObject:model];
-            
+            }else if(type == 3) {
+                JZTJModel *model = [[JZTJModel alloc]initWithDic:dic];
+                [self.GNZPArr addObject:model];
+            }else {
+                JZTJModel *model = [[JZTJModel alloc]initWithDic:dic];
+                [self.GWZPArr addObject:model];
             }
+            
             
         }
       //把刷新数据放在主线程
@@ -147,20 +155,36 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0 ) {
-        LBTViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LBTViewCell" forIndexPath:indexPath];
+       VideoLBTViewCell  *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"VideoLBTViewCell" forIndexPath:indexPath];
         if (self.LBTArr.count > 0) {
+            cell.model = self.LBTArr[indexPath.row];
+            cell.VideoLBTDataSource = self.LBTArr;
 
         }
 
         return cell;
     }
     VideoViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"videoCell"forIndexPath:indexPath];
-    if (indexPath.section == 1) {
+    if (indexPath.section == 1)
+    {
         if (self.JZTJArr.count > 0) {
             cell.model = self.JZTJArr[indexPath.row];
+           }
+    } else if (indexPath.section == 2)
+    {
+            if (self.GNZPArr.count > 0) {
+                cell.model = self.GNZPArr[indexPath.row];
+            }
+    }else if (indexPath.section == 3)
+    {
+        if (self.GWZPArr.count > 0) {
+            cell.model = self.GWZPArr[indexPath.row];
         }
         
+        
     }
+        
+    
     
     return cell;
 }
@@ -172,11 +196,15 @@
     if (indexPath.section == 1) {
         JZTJModel *model = self.JZTJArr[indexPath.row];
         listVideoVC.listID = [model.ID intValue];
-        
-        
-        
-        
+    }else if (indexPath.section == 2) {
+        JZTJModel *model = self.GNZPArr[indexPath.row];
+        listVideoVC.listID = [model.ID intValue];
+    }else if (indexPath.section == 3) {
+        JZTJModel *model = self.GWZPArr[indexPath.row];
+        listVideoVC.listID = [model.ID intValue];
+    
     }
+    
     
     [self presentViewController:listVideoVC animated:YES completion:nil];
     
@@ -223,8 +251,7 @@
     if (indexPath.section == 0) {
         return CGSizeMake(kScreenWidth, 200);
     }
-
-    return CGSizeMake((kScreenWidth - 30)/3, 180);
+     return CGSizeMake((kScreenWidth - 30)/3, 180);
 }
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
 

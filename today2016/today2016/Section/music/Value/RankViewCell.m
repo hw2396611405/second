@@ -26,7 +26,7 @@
     self.tracklabel.text = [model.tracks stringValue];
     self.introlLabel.text = model.intro;
     [self.photoView sd_setImageWithURL:[NSURL  URLWithString: model.coverSmall]];
-
+    
 }
 
 @end

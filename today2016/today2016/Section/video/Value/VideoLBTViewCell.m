@@ -37,7 +37,7 @@
     }
     NSMutableArray *arr = [[NSMutableArray alloc]initWithCapacity:1];
     for (LBTModel *model  in VideoLBTDataSource) {
-        [arr addObject:model];
+        [arr addObject:model.img];
     }
     self.VideoLBTView.imageURLStringsGroup = [NSArray arrayWithArray:arr];
 

@@ -9,7 +9,7 @@
 #import "LBTModel.h"
 
 @implementation LBTModel
-- (instancetype)initWithDic:(NSDictionary *)dic {
+- (LBTModel *)initWithDic:(NSDictionary *)dic {
     self = [super init];
     if (self) {
         [self setValuesForKeysWithDictionary:dic];
