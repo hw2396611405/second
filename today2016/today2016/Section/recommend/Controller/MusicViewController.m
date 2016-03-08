@@ -96,6 +96,15 @@
 }
 //数据解析的实现
 - (void)dataRequestURL:(NSString *)url {
+    
+    
+//  [[[NSURLSession sharedSession] dataTaskWithURL:[NSURL URLWithString:@"http://api2.jxvdy.com/video_info?token=(null)&id=33428"] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+//        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingAllowFragments) error:nil];
+//        NSLog(@"%@",dic);
+//    }] resume];
+//    
+    
+    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager GET:url parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         NSDictionary *dic = [NSDictionary dictionaryWithDictionary:responseObject];
@@ -135,7 +144,6 @@
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"error%@",error);
     }];
-    
     
 }
 
@@ -193,7 +201,8 @@
       UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ListMusicViewController" bundle:nil];
     ListMusicViewController *listVC = [storyboard instantiateViewControllerWithIdentifier:@"ListMusicViewController"];
     if (indexPath.section == 1) {
-        
+        commonModel *model = self.XBTJArr[indexPath.row];
+        listVC.albumId = [model.albumId integerValue];
     }else if (indexPath.section == 2) {
     
     }else {

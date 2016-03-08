@@ -13,6 +13,7 @@
 #import "listMusicModel.h"
 #import "FirstListHeader.h"
 #import "PlayViewController.h"
+#import "secondHeaderView.h"
 
 @interface ListMusicViewController ()
 @property (nonatomic,assign)NSInteger page;//存储当前页数
@@ -62,7 +63,8 @@
     }];
 }
 
-- (void)loadDataFromServer{
+- (void)loadDataFromServer
+{
     //拼接URL
     NSString *listUrl = [MusicListUrl stringByReplacingOccurrencesOfString:@"%ld" withString:[NSString  stringWithFormat:@"%ld",self.albumId]] ;
   
@@ -150,6 +152,7 @@
     [self.navigationController pushViewController:playVC animated:YES];
 
 }
+
 
 
 /*

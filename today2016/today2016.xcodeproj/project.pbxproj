@@ -170,6 +170,8 @@
 		7BC6C8141C844DD600F73768 /* MusicViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BC6C8121C844DD600F73768 /* MusicViewHeader.xib */; };
 		7BC6C8181C8467E400F73768 /* JPTDViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC6C8161C8467E400F73768 /* JPTDViewCell.m */; };
 		7BC6C8191C8467E400F73768 /* JPTDViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BC6C8171C8467E400F73768 /* JPTDViewCell.xib */; };
+		7BD2CD7A1C8AC6A000D15CB8 /* secondHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD2CD791C8AC6A000D15CB8 /* secondHeaderView.m */; };
+		7BD2CD7C1C8AC83400D15CB8 /* secondHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BD2CD7B1C8AC83400D15CB8 /* secondHeaderView.xib */; };
 		7BD5C2381C88775400A4A858 /* introductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD5C2371C88775400A4A858 /* introductionViewController.swift */; };
 		7BD804A81C81B86800884742 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BD8049B1C81B86800884742 /* 1.png */; };
 		7BD804A91C81B86800884742 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BD8049C1C81B86800884742 /* 2.png */; };
@@ -436,6 +438,9 @@
 		7BC6C8151C8467E400F73768 /* JPTDViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPTDViewCell.h; sourceTree = "<group>"; };
 		7BC6C8161C8467E400F73768 /* JPTDViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPTDViewCell.m; sourceTree = "<group>"; };
 		7BC6C8171C8467E400F73768 /* JPTDViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JPTDViewCell.xib; sourceTree = "<group>"; };
+		7BD2CD781C8AC6A000D15CB8 /* secondHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = secondHeaderView.h; sourceTree = "<group>"; };
+		7BD2CD791C8AC6A000D15CB8 /* secondHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = secondHeaderView.m; sourceTree = "<group>"; };
+		7BD2CD7B1C8AC83400D15CB8 /* secondHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = secondHeaderView.xib; sourceTree = "<group>"; };
 		7BD5C2371C88775400A4A858 /* introductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = introductionViewController.swift; sourceTree = "<group>"; };
 		7BD8049B1C81B86800884742 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		7BD8049C1C81B86800884742 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
@@ -771,6 +776,9 @@
 				7B9154581C8595960077A9E3 /* FirstListHeader.xib */,
 				7B9154661C85BBF50077A9E3 /* ListMusicViewCell.h */,
 				7B9154671C85BBF50077A9E3 /* ListMusicViewCell.m */,
+				7BD2CD781C8AC6A000D15CB8 /* secondHeaderView.h */,
+				7BD2CD791C8AC6A000D15CB8 /* secondHeaderView.m */,
+				7BD2CD7B1C8AC83400D15CB8 /* secondHeaderView.xib */,
 			);
 			path = Music;
 			sourceTree = "<group>";
@@ -1490,6 +1498,7 @@
 				7B7F6E5E1C88697B00F3741E /* 注册.png in Resources */,
 				7B7F6DFA1C88697B00F3741E /* 白色返回.png in Resources */,
 				7B7F6E541C88697B00F3741E /* 已收起.png in Resources */,
+				7BD2CD7C1C8AC83400D15CB8 /* secondHeaderView.xib in Resources */,
 				7BD804A81C81B86800884742 /* 1.png in Resources */,
 				7B7F6E2A1C88697B00F3741E /* 全部开始.png in Resources */,
 				7B7F6E3F1C88697B00F3741E /* 腾讯QQ.png in Resources */,
@@ -1576,6 +1585,7 @@
 				7BC6C8051C843EE000F73768 /* AFNetworkReachabilityManager.m in Sources */,
 				7BC6C8181C8467E400F73768 /* JPTDViewCell.m in Sources */,
 				7BC6C7B81C83F1DA00F73768 /* LBTViewCell.m in Sources */,
+				7BD2CD7A1C8AC6A000D15CB8 /* secondHeaderView.m in Sources */,
 				7BECAEB81C80804F009D8CB6 /* UIScrollView+MJRefresh.m in Sources */,
 				7BC4CB191C87179A00888633 /* VideoViewController.m in Sources */,
 				7BECAE3D1C8055A3009D8CB6 /* PlayViewController.m in Sources */,
@@ -1708,14 +1718,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
 				INFOPLIST_FILE = today2016/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wanghui.today2016;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/lanouhn/Desktop/today/today2016/today2016/Section/video/Controller/today2016-Bridging-Header.h";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/today2016/Section/video/Controller/today2016-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1724,13 +1739,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
 				INFOPLIST_FILE = today2016/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wanghui.today2016;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/lanouhn/Desktop/today/today2016/today2016/Section/video/Controller/today2016-Bridging-Header.h";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/today2016/Section/video/Controller/today2016-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

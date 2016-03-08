@@ -193,16 +193,18 @@
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"listVideoViewController" bundle:nil];
     listVideoViewController *listVideoVC = [storyboard instantiateViewControllerWithIdentifier:@"listVideoViewController"];
+    
+    
+    
     if (indexPath.section == 1) {
         JZTJModel *model = self.JZTJArr[indexPath.row];
         listVideoVC.listID = [model.ID intValue];
+   
     }else if (indexPath.section == 2) {
         JZTJModel *model = self.GNZPArr[indexPath.row];
-        listVideoVC.listID = [model.ID intValue];
     }else if (indexPath.section == 3) {
         JZTJModel *model = self.GWZPArr[indexPath.row];
         listVideoVC.listID = [model.ID intValue];
-    
     }
     
     

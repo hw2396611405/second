@@ -13,7 +13,11 @@
 -(void)setModel:(listHeaderMOdel *)model {
     NSString *str = model.tags;
    NSArray *arr =  [str componentsSeparatedByString:@","];
-    if (arr.count == 1) {
+    if (arr.count == 0) {
+        self.tagLabel1.hidden = YES;
+        self.tagLabel2.hidden = YES;
+        self.tagLabel3.hidden = YES;
+    }else if (arr.count == 1) {
         self.tagLabel1.text = arr[0];
         self.tagLabel2.hidden = YES;
         self.tagLabel3.hidden = YES;
@@ -21,7 +25,7 @@
         self.tagLabel1.text =arr[0];
         self.tagLabel2.text = arr[1];
         self.tagLabel3.hidden = YES;
-    }else {
+    }else{
         self.tagLabel1.text = arr[0];
         self.tagLabel2.text = arr[1];
         self.tagLabel3.text = arr[2];

@@ -107,12 +107,6 @@
                                 </mask>
                             </variation>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wR-3i-O9G">
-                            <rect key="frame" x="373" y="64" width="11" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXB-tE-n02">
                             <rect key="frame" x="211" y="24" width="108" height="24"/>
                             <constraints>
@@ -203,11 +197,17 @@
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wR-3i-O9G">
+                            <rect key="frame" x="373" y="64" width="11" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="Quh-xy-jGM" secondAttribute="bottom" constant="30" id="1Wn-ff-7Qx"/>
                         <constraint firstItem="4wR-3i-O9G" firstAttribute="leading" secondItem="1rL-R3-vI1" secondAttribute="trailing" constant="76" id="3Wp-cm-bVX">
-                            <variation key="heightClass=regular-widthClass=compact" constant="8"/>
+                            <variation key="heightClass=regular-widthClass=compact" constant="86"/>
                         </constraint>
                         <constraint firstItem="xp2-cl-UJM" firstAttribute="width" secondItem="lzn-tq-eM3" secondAttribute="width" id="8Je-ao-q1x"/>
                         <constraint firstItem="Quh-xy-jGM" firstAttribute="leading" secondItem="Hgh-pg-Ahz" secondAttribute="leading" constant="20" id="Iau-db-2Kj"/>
@@ -222,7 +222,9 @@
                             <variation key="heightClass=regular-widthClass=compact" constant="-3"/>
                         </constraint>
                         <constraint firstItem="4wR-3i-O9G" firstAttribute="leading" secondItem="1rL-R3-vI1" secondAttribute="trailing" constant="10" id="bmi-FZ-kRC"/>
-                        <constraint firstItem="U4D-pX-MlE" firstAttribute="leading" secondItem="Quh-xy-jGM" secondAttribute="trailing" constant="10" id="cMb-fA-ihB"/>
+                        <constraint firstItem="U4D-pX-MlE" firstAttribute="leading" secondItem="Quh-xy-jGM" secondAttribute="trailing" constant="10" id="cMb-fA-ihB">
+                            <variation key="heightClass=regular-widthClass=compact" constant="6"/>
+                        </constraint>
                         <constraint firstAttribute="bottom" secondItem="lzn-tq-eM3" secondAttribute="bottom" constant="25" id="dpl-ZD-Xb5"/>
                         <constraint firstItem="lzn-tq-eM3" firstAttribute="leading" secondItem="Quh-xy-jGM" secondAttribute="trailing" constant="20" id="eC0-TA-GWR"/>
                         <constraint firstAttribute="bottom" secondItem="GL1-YO-DZF" secondAttribute="bottom" constant="25" id="fET-5h-B2O"/>
@@ -238,7 +240,7 @@
                         <constraint firstItem="GL1-YO-DZF" firstAttribute="leading" secondItem="lzn-tq-eM3" secondAttribute="trailing" constant="20" id="t2X-MW-gZA"/>
                         <constraint firstItem="GL1-YO-DZF" firstAttribute="width" secondItem="lzn-tq-eM3" secondAttribute="width" id="tLj-G4-xr2"/>
                         <constraint firstItem="1rL-R3-vI1" firstAttribute="top" secondItem="U4D-pX-MlE" secondAttribute="bottom" id="vRq-Nb-cKN">
-                            <variation key="heightClass=regular-widthClass=compact" constant="3"/>
+                            <variation key="heightClass=regular-widthClass=compact" constant="13"/>
                         </constraint>
                         <constraint firstItem="1rL-R3-vI1" firstAttribute="top" secondItem="U4D-pX-MlE" secondAttribute="bottom" constant="3" id="z7I-5X-GGK"/>
                         <constraint firstItem="Quh-xy-jGM" firstAttribute="top" secondItem="Hgh-pg-Ahz" secondAttribute="top" constant="30" id="z7f-5l-l7Q"/>
@@ -278,7 +280,7 @@
                         <mask key="constraints">
                             <include reference="1Wn-ff-7Qx"/>
                             <include reference="Iau-db-2Kj"/>
-                            <include reference="z7f-5l-l7Q"/>
+                            <exclude reference="z7f-5l-l7Q"/>
                             <include reference="Taa-tn-EaI"/>
                             <include reference="cMb-fA-ihB"/>
                             <exclude reference="MkZ-r7-i3g"/>
@@ -341,7 +343,7 @@
                 <outlet property="tagLabel2" destination="GL1-YO-DZF" id="hn3-wA-VtP"/>
                 <outlet property="tagLabel3" destination="xp2-cl-UJM" id="1mg-Hx-TAE"/>
             </connections>
-            <point key="canvasLocation" x="-233.5" y="-374"/>
+            <point key="canvasLocation" x="-162" y="-500"/>
         </view>
     </objects>
 </document>

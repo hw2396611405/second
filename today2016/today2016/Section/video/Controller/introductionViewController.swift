@@ -11,26 +11,46 @@ import UIKit
 class introductionViewController: UITableViewController {
     var model:listVideoModel!
     var ID: Int!
-    //将属性声明为setter和getter方法
-    var listID:Int {
-        set {
-            self.ID = newValue
-        }
-        get {
-            return 20
-        }
-    }
+    //初始化数组
+    lazy var dataSourceArr:NSMutableArray = NSMutableArray(capacity: 1)
     
+    //将属性声明为setter和getter方法
+    var listID:Int!
+//        {
+//        set {
+//            self.ID = newValue
+//        }
+//        get {
+//            return 20
+//        }
+//    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+       self.tableView.estimatedRowHeight = 40.0
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+       //通知中心
+        
+        let notificationCenter:NSNotificationCenter = NSNotificationCenter.defaultCenter()
+        
+        notificationCenter.addObserver(self, selector: "changeID:", name: "listIDNotfi", object: nil)
+    
     }
+    
+    
+    //实现功能
+    func  changeID (ID:NSNotification) {
+        let list = ID.object as! NSMutableArray
+        self.dataSourceArr = list
+        print("+++++]]]]]\(list)")
+    
+        self.tableView.reloadData()
+
+        
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -50,12 +70,14 @@ class introductionViewController: UITableViewController {
     }
 
 
+    //在这里实现传值
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("listVideoViewCell", forIndexPath: indexPath)as!listVideoViewCell
-        
-
-        // Configure the cell...
-
+        //注意这里给model赋值时的类型
+        if self.dataSourceArr.count > 0 {
+           let listModel = self.dataSourceArr[indexPath.row] as! listVideoModel
+        cell.voluationForModel(listModel)
+        }
         return cell
     }
 

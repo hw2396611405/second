@@ -27,6 +27,10 @@
 }
 
 
+- (IBAction)collectBtn:(id)sender {
+    
+    
+}
 
 - (IBAction)proBtn:(id)sender {
     if (self.index == 0) {
