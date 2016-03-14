@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4b1633b4-dc85-48e9-b95d-1575c3b5885c",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "4b1633b4-dc85-48e9-b95d-1575c3b5885c" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4b1633b4-dc85-48e9-b95d-1575c3b5885c" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "662847B0-7715-4D75-BECE-6205F864A806",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4b1633b4-dc85-48e9-b95d-1575c3b5885c" : "doctor11\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "doctor",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Doctor\/doctor\/doctor.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/www.svnchina.com\/svn\/doctor11",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4b1633b4-dc85-48e9-b95d-1575c3b5885c"
+    }
+  ]
+}

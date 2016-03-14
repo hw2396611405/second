@@ -1,0 +1,33 @@
+//
+//  PrefixHeader.pch
+//  doctor
+//
+//  Created by lanouhn on 15/12/29.
+//  Copyright © 2015年 王辉. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "UIImageView+WebCache.h"
+#import "UMSocial.h"
+#import "MJRefresh.h"
+#import "KnowledgeModel.h"
+#import "doctor.h"
+#import "knowledgeDetailViewController.h"
+#import "FMDB.h"
+#import "FileManager.h"
+#import "MainTabBarController.h"
+#import "MMDrawerController.h"
+#import "MMDrawerBarButtonItem.h"
+#import "UIViewController+MMDrawerController.h"
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKUI/ShareSDKUI.h>
+#import "single.h"
+#import "ScrollView.h"
+#import "CollectHelper.h"
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
