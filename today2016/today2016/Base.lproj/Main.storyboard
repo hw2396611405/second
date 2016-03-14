@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9mL-5y-nbd">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -228,13 +230,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Nzj-Xn-364">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Nzj-Xn-364">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="88" width="400" height="780"/>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75L-7v-1F2">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75L-7v-1F2">
                                 <rect key="frame" x="126" y="528" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="PbZ-sR-sjC"/>
@@ -257,7 +259,7 @@
                                     <action selector="proBtn:" destination="5Mh-ue-v7P" eventType="touchUpInside" id="ee3-4J-cbf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGF-sd-muX">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGF-sd-muX">
                                 <rect key="frame" x="388" y="528" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="3BP-fv-dki"/>
@@ -280,7 +282,7 @@
                                     <action selector="nextBtn:" destination="5Mh-ue-v7P" eventType="touchUpInside" id="NEi-Ax-QrK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oH7-Pf-fiM">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oH7-Pf-fiM">
                                 <rect key="frame" x="268" y="515" width="65" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="63" id="Ijd-yY-ydA"/>
@@ -303,7 +305,7 @@
                                     <action selector="playOrPauseBtn:" destination="5Mh-ue-v7P" eventType="touchUpInside" id="Nkm-ZD-p8w"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUZ-Om-REn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUZ-Om-REn">
                                 <rect key="frame" x="530" y="485" width="50" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="W0B-gE-0Ew"/>
@@ -325,7 +327,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yoc-oE-a4O">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yoc-oE-a4O">
                                 <rect key="frame" x="20" y="485" width="50" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="63" id="G8w-ch-pJ6"/>
@@ -366,7 +368,7 @@
                                     </mask>
                                 </variation>
                             </progressView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rm6-Qp-GYE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rm6-Qp-GYE">
                                 <rect key="frame" x="233" y="254" width="129" height="136"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="131" id="Tk6-dI-ZM8"/>
@@ -385,7 +387,7 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cm2_play_disc.png" translatesAutoresizingMaskIntoConstraints="NO" id="eY1-CA-RB8">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="cm2_play_disc.png" translatesAutoresizingMaskIntoConstraints="NO" id="eY1-CA-RB8">
                                 <rect key="frame" x="198" y="222" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="BBt-ZY-zob"/>
@@ -404,7 +406,7 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cm2_play_needle_play.png" translatesAutoresizingMaskIntoConstraints="NO" id="mZS-vR-eKu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="cm2_play_needle_play.png" translatesAutoresizingMaskIntoConstraints="NO" id="mZS-vR-eKu">
                                 <rect key="frame" x="248" y="117" width="105" height="153"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="153" id="5Ee-EA-MJ4">
@@ -484,6 +486,8 @@
                                 <exclude reference="Ss5-eS-s77"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="68g-bQ-Wle"/>
+                                <exclude reference="ZVi-lg-igN"/>
                                 <exclude reference="3II-f6-cI3"/>
                                 <exclude reference="dJx-DQ-pQh"/>
                                 <exclude reference="ecs-eN-VZy"/>
@@ -492,18 +496,16 @@
                                 <exclude reference="3Zm-Jr-lji"/>
                                 <exclude reference="rUF-1q-84T"/>
                                 <exclude reference="7Aa-t4-kda"/>
-                                <exclude reference="68g-bQ-Wle"/>
-                                <exclude reference="ZVi-lg-igN"/>
-                                <exclude reference="11i-em-Uk6"/>
-                                <exclude reference="Dee-ap-ugR"/>
                                 <exclude reference="YHP-oI-Amq"/>
                                 <exclude reference="3cK-HV-1WH"/>
                                 <exclude reference="NeM-qF-Bk7"/>
                                 <exclude reference="Qav-VA-xPL"/>
-                                <exclude reference="YDc-w7-hsp"/>
                                 <exclude reference="Gnu-eJ-Ilw"/>
                                 <exclude reference="g53-3Q-gcY"/>
                                 <exclude reference="yBD-5t-dLE"/>
+                                <exclude reference="YDc-w7-hsp"/>
+                                <exclude reference="11i-em-Uk6"/>
+                                <exclude reference="Dee-ap-ugR"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -512,6 +514,8 @@
                                 <include reference="Ss5-eS-s77"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="68g-bQ-Wle"/>
+                                <include reference="ZVi-lg-igN"/>
                                 <include reference="3II-f6-cI3"/>
                                 <include reference="dJx-DQ-pQh"/>
                                 <include reference="ecs-eN-VZy"/>
@@ -520,18 +524,16 @@
                                 <include reference="3Zm-Jr-lji"/>
                                 <include reference="rUF-1q-84T"/>
                                 <include reference="7Aa-t4-kda"/>
-                                <include reference="68g-bQ-Wle"/>
-                                <include reference="ZVi-lg-igN"/>
-                                <include reference="11i-em-Uk6"/>
-                                <include reference="Dee-ap-ugR"/>
                                 <include reference="YHP-oI-Amq"/>
                                 <include reference="3cK-HV-1WH"/>
                                 <include reference="NeM-qF-Bk7"/>
                                 <include reference="Qav-VA-xPL"/>
-                                <include reference="YDc-w7-hsp"/>
                                 <include reference="Gnu-eJ-Ilw"/>
                                 <include reference="g53-3Q-gcY"/>
                                 <include reference="yBD-5t-dLE"/>
+                                <include reference="YDc-w7-hsp"/>
+                                <include reference="11i-em-Uk6"/>
+                                <include reference="Dee-ap-ugR"/>
                             </mask>
                         </variation>
                     </view>

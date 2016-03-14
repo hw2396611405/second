@@ -106,6 +106,22 @@
     
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+//    //post 请求
+//    NSString *url1 = @"http:10.90.81.149/login.php";
+//
+//    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+//    [dic setObject:@"zhige" forKey:@"user"];
+//    [dic setObject:@"123" forKey:@"password"];
+//    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+//    [manager POST:url1 parameters:dic success:^(NSURLSessionDataTask *task, id responseObject) {
+//        NSLog(@"%@",task);
+//        NSLog(@"task%@",responseObject);
+//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+//        NSLog(@"%@",error);
+//    }];
+    
+    
+    
     [manager GET:url parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         NSDictionary *dic = [NSDictionary dictionaryWithDictionary:responseObject];
         NSArray  *focusImagesArr = dic[@"focusImages"][@"list"];
